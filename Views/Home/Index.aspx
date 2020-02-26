@@ -7,6 +7,31 @@
     <title>Index</title>
 </head>
 <body>
-    <h1>Bienvenido</h1>
+
+    <h1>Lista de Videos</h1>
+    
+
+    Se encontraron <%: ((System.Data.DataTable)ViewData["datavideo"]).Rows.Count %> videos
+    <div> Opciones </div>
+
+
+    <p>
+        <asp:HyperLink ID="hpAgregar" runat="server" NavigateUrl="/Home/Agregar">Agregar</asp:HyperLink>
+    </p>
+    <asp:HyperLink ID="hpEliminar" runat="server" NavigateUrl="/Home/Eliminar">Eliminar</asp:HyperLink>
+    <p>
+        <asp:HyperLink ID="hpModificar" runat="server" NavigateUrl="/Home/Modificar">Modificar</asp:HyperLink>
+    </p>
+    <hr />
+    <% 
+        foreach (System.Data.DataRow video in ((System.Data.DataTable)ViewData["datavideo"]).Rows)
+        {%>
+    <p> <%: video["titulo"].ToString() %> </p>
+    <iframe width="560" height="315" src="<%: video["url"].ToString() %>" 
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+    <%
+        }           
+    %>
 </body>
 </html>
