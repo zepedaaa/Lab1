@@ -16,11 +16,11 @@
 
 
     <p>
-        <asp:HyperLink ID="hpAgregar" runat="server" NavigateUrl="/Home/Agregar">Agregar</asp:HyperLink>
+        <asp:HyperLink ID="hpAgregar" runat="server" NavigateUrl="/Video/Create">Agregar</asp:HyperLink>
     </p>
-    <asp:HyperLink ID="hpEliminar" runat="server" NavigateUrl="/Home/Eliminar">Eliminar</asp:HyperLink>
+    <asp:HyperLink ID="hpEliminar" runat="server" NavigateUrl="/Video/Eliminar">Eliminar</asp:HyperLink>
     <p>
-        <asp:HyperLink ID="hpModificar" runat="server" NavigateUrl="/Home/Modificar">Modificar</asp:HyperLink>
+        <asp:HyperLink ID="hpModificar" runat="server" NavigateUrl="/Video/Actualizar">Modificar</asp:HyperLink>
     </p>
     <hr />
     <% 
